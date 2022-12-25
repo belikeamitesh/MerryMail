@@ -5,8 +5,6 @@ MerryMaol is an application that allows you to make your profile, design your ow
 
 MerryMail helps people **design and send** cards in a very short period . Suppose that you have been busy this weekend to buy and send card to your loved ones , so here is merrymail to help you out at a very short span, very easily and free of cost !
 
-### Check out our [Video Demo](https://youtu.be/)!
-
 ## 💡 Inspiration
 
 In recent times we see that peo
