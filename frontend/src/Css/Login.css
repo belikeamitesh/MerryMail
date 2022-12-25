@@ -17,6 +17,14 @@
     justify-content: space-evenly;
     align-items: center;
 }
+.Login-left-send{
+    flex: 0.5;
+    height: 95%;
+    /* border: 2px solid var(--default-code); */
+    display: flex;
+    padding-left: 50px;
+    flex-direction: column;
+}
 .login-home{
     flex: 0.1;
     width: 100%;
@@ -66,10 +74,44 @@
     align-items: flex-start;
     justify-content: space-evenly;
 }
+.Login-form-send{
+    height: 200%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
 .Login-input{
     width: 70%;
     flex: 0.3;
     max-height: 50px;
+    padding: 1% 2%;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.3rem;
+    font-family: var(--default-font);
+    outline: none;
+    position: relative;
+    transition: all 350ms ease-in-out;
+}
+.Login-input-message{
+    width: 70%;
+    flex: 0.3;
+    max-height: 90px;
+    padding: 1% 2%;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.3rem;
+    font-family: var(--default-font);
+    outline: none;
+    position: relative;
+    transition: all 350ms ease-in-out;
+}
+.Login-input-body{
+    width: 70%;
+    flex: 0.3;
+    max-height: 150px;
     padding: 1% 2%;
     border: none;
     border-radius: 4px;
@@ -148,12 +190,20 @@
     font-size: 2.2rem;
     text-shadow: 2px 1px 4px #233e53;
 }
-.Login-welcome>p{
+.Login-welcome-p{
     padding: 0;
     width: 90%;
-    margin-top: 3%;
-    font-size: 1.4rem;
+    margin: 3%;
+    font-size: 0.45rem;
+    color: black;
     text-shadow: 2px 1px 4px #233e53;
+}
+.Login-welcome-border{
+    border-style: solid;
+    border-width: thin;
+    border-color: #FFFFFF;
+    word-wrap: break-word;
+    max-width: 150px;
 }
 .Login-img{
     width: 100%;

@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use(cors())
 
 
-const send = async (email, message, subject, imageObj) => {
+const send = async (email, emailBody, subject, imageObj) => {
     var arr = imageObj.split(',')
     const buffer = Buffer.from(arr[1], "base64");
     fs.writeFileSync("attachment-image.jpg", buffer);
@@ -30,7 +30,7 @@ const send = async (email, message, subject, imageObj) => {
     const options = {
       to: email,
       subject: subject,
-      html: `<p>${message}</p>`,
+      html: `<p>${emailBody}</p>`,
       attachments: fileAttachments,
       textEncoding: 'base64',
       headers: [
@@ -44,8 +44,8 @@ const send = async (email, message, subject, imageObj) => {
   };
 
 app.post('/send', (req, res) => {
-    const { email, message, subject, imageObj } = req.body
-    send(email, message, subject, imageObj)
+    const { email, emailBody, subject, imageObj } = req.body
+    send(email, emailBody, subject, imageObj)
       .then((messageId) => console.log('Message sent successfully:', messageId))
       .catch((err) => console.error(err));
 })
